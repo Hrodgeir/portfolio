@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
+      <main className="row-start-2 flex flex-col items-center sm:items-start">
         <div className="flex flex-col items-center gap-6 rounded-2xl p-7 md:flex-row md:gap-8">
           <div>
             <Image
-              className="h-auto max-w-lg rounded-3xl grayscale filter transition-all duration-300 hover:grayscale-0"
+              className="h-auto max-w-lg rounded-3xl"
               src="/me.png"
               alt="me"
               width={225}
@@ -15,10 +15,12 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex flex-col items-center gap-12 md:items-start">
+          <div className="flex flex-col items-center gap-8 md:items-start">
             <div>
               <div className="text-2xl font-medium">Matt Hodgson</div>
-              <div className="font-bold text-green-500">Software Engineer</div>
+              <div className="bg-gradient-to-r from-cyan-500 to-cyan-900 bg-clip-text font-bold text-transparent">
+                Software Engineer
+              </div>
             </div>
             <a
               className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -38,40 +40,189 @@ export default function Home() {
             </a>
           </div>
         </div>
+        <div className="flex py-4 px-6 max-w-4xl">
+          I am a graduate of a Bachelor of Software Engineering degree from the
+          University of Victoria. I specialize in creating intuitive, responsive
+          web applications and thrive on delivering impactful user experiences.
+        </div>
+        <section className="py-8">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="space-y-8">
+              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+                <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
+                  <Image
+                    className="brightness-0 invert filter"
+                    src="evbg.svg"
+                    alt="Company Logo"
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <div className="flex flex-col gap-4 md:w-3/4 md:pl-6">
+                  <div>
+                    <h3 className="text-xl font-semibold">
+                      Sr. Software Engineer I
+                    </h3>
+                    <p className="text-lg">xMatters</p>
+                    <p className="mt-2 text-sm">April 2022 - Present</p>
+                    <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
+                      <li>
+                        Handled frontend library upgrades and refactored large
+                        scale, shared React components.
+                      </li>
+                      <li>
+                        Created flowcharts for the team to manage owned services
+                        such as delivery pipelines.
+                      </li>
+                      <li>
+                        Performed code reviews for peers, assisting with
+                        development questions and feedback.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">
+                      Software Engineer II
+                    </h3>
+                    <p className="text-lg">xMatters</p>
+                    <p className="mt-2 text-sm">March 2021 - April 2022</p>
+                    <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
+                      <li>
+                        Developed various features for the xMatters web
+                        application that allows customers to perform digital
+                        operations centered around alert notifications and
+                        incident management.
+                      </li>
+                      <li>
+                        Fostered expertise with React, JavaScript, and SCSS to
+                        create modern UI features.
+                      </li>
+                      <li>
+                        Presented new features to stakeholders on a weekly
+                        basis.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+                <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
+                  <Image
+                    className="brightness-0 invert filter"
+                    src="vertigis.svg"
+                    alt="Company Logo"
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <div className="md:w-3/4 md:pl-6">
+                  <h3 className="text-xl font-semibold">Software Developer</h3>
+                  <p className="text-lg">Professional Services</p>
+                  <p className="mt-2 text-sm">April 2018 to March 2021</p>
+                  <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
+                    <li>
+                      Developed more than 20 custom web mapping applications
+                      using both the ArcGIS JavaScript API, and ArcGIS .NET
+                      Runtime for clients that involved requirements analysis,
+                      design, iterative development, product demonstrations,
+                      documentation, and software delivery.
+                    </li>
+                    <li>
+                      Developed custom UI components using TypeScript and React,
+                      and integrated complex geometry editing into the Geocortex
+                      Mobile product.
+                    </li>
+                    <li>
+                      Lead 4 projects as the technical lead to ensure
+                      successful, in-budget deliveries.
+                    </li>
+                    <li>
+                      Delivered 4 client-specific cross-platform mobile mapping
+                      applications for Windows, Android, and iOS using the
+                      Xamarin framework and ArcGIS .NET Runtime.
+                    </li>
+                    <li>
+                      Created more than 50 detailed quotes for clients based on
+                      technical knowledge and experience, each having an average
+                      of 95% success rate for staying within budget.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://www.linkedin.com/in/matt-hodgson-ba06b7b7/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            className="dark:invert"
-            src="/linkedin.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          LinkedIn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/Hrodgeir"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            className="dark:invert"
-            src="/github.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          GitHub
-        </a>
+      <footer className="row-start-3 flex flex-col flex-wrap items-center justify-center gap-[48px]">
+        <div className="flex flex-row gap-[24px]">
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://www.linkedin.com/in/matt-hodgson-ba06b7b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              className="dark:invert"
+              src="/linkedin.svg"
+              alt="File icon"
+              width={16}
+              height={16}
+            />
+            LinkedIn
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://github.com/Hrodgeir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              className="dark:invert"
+              src="/github.svg"
+              alt="Window icon"
+              width={16}
+              height={16}
+            />
+            GitHub
+          </a>
+        </div>
+        <div className="flex flex-col items-center gap-3">
+          <a
+            className="flex items-center gap-1 text-xs hover:underline hover:underline-offset-4"
+            href="https://github.com/Hrodgeir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by
+            <Image
+              aria-hidden
+              className="light:invert"
+              src="/vercel.svg"
+              alt="Window icon"
+              width={16}
+              height={16}
+            />
+            Vercel
+          </a>
+          <a
+            className="flex items-center gap-0.5 text-xs hover:underline hover:underline-offset-4"
+            href="https://github.com/Hrodgeir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              className="dark:invert"
+              src="/copyright.svg"
+              alt="Window icon"
+              width={24}
+              height={24}
+            />
+            2025 Matt Hodgson
+          </a>
+        </div>
       </footer>
     </div>
   );
