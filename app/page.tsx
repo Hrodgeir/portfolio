@@ -19,7 +19,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-8 md:items-start">
             <div>
               <div className="text-2xl font-medium">Matt Hodgson</div>
-              <div className="bg-gradient-to-r from-cyan-500 to-cyan-900 bg-clip-text font-bold text-transparent">
+              <div className="bg-gradient-to-r from-cyan-500 to-cyan-900 hover:from-cyan-950 hover:to-cyan-500 transition duration-1000 bg-clip-text font-bold text-transparent">
                 Software Engineer
               </div>
             </div>
@@ -46,12 +46,12 @@ export default function Home() {
           University of Victoria. I specialize in creating intuitive, responsive
           web applications and thrive on delivering impactful user experiences.
         </div>
-        <section className="py-8">
+        <section className="py-4">
           <div className="mx-auto max-w-4xl px-6">
             <div className="space-y-8">
               <Carousel>
                 <>
-                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-500 md:flex-row">
+                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-1000 md:flex-row">
                     <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                       <Image
                         className="brightness-0 invert filter"
@@ -108,7 +108,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-500 md:flex-row">
+                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-1000 md:flex-row">
                     <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                       <Image
                         className="brightness-0 invert filter"
