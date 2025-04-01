@@ -48,7 +48,7 @@ export default function Home() {
         <section className="py-8">
           <div className="mx-auto max-w-4xl px-6">
             <div className="space-y-8">
-              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+              <div className="flex flex-col rounded-lg bg-gradient-to-b text-white from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
                 <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                   <Image
                     className="brightness-0 invert filter"
@@ -105,7 +105,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+              <div className="flex flex-col rounded-lg bg-gradient-to-b text-white from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
                 <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                   <Image
                     className="brightness-0 invert filter"
