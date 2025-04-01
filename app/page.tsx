@@ -40,7 +40,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex py-4 px-6 max-w-4xl">
+        <div className="flex max-w-4xl px-6 py-4">
           I am a graduate of a Bachelor of Software Engineering degree from the
           University of Victoria. I specialize in creating intuitive, responsive
           web applications and thrive on delivering impactful user experiences.
@@ -48,7 +48,7 @@ export default function Home() {
         <section className="py-8">
           <div className="mx-auto max-w-4xl px-6">
             <div className="space-y-8">
-              <div className="flex flex-col rounded-lg bg-gradient-to-b text-white from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 text-white transition duration-300 hover:scale-101 md:flex-row">
                 <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                   <Image
                     className="brightness-0 invert filter"
@@ -105,7 +105,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg bg-gradient-to-b text-white from-cyan-500 to-cyan-950 p-6 transition duration-300 hover:scale-101 md:flex-row">
+              <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 p-6 text-white transition duration-300 hover:scale-101 md:flex-row">
                 <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
                   <Image
                     className="brightness-0 invert filter"
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-3">
           <a
             className="flex items-center gap-1 text-xs hover:underline hover:underline-offset-4"
-            href="https://github.com/Hrodgeir"
+            href="https://vercel.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -206,12 +206,7 @@ export default function Home() {
             />
             Vercel
           </a>
-          <a
-            className="flex items-center gap-0.5 text-xs hover:underline hover:underline-offset-4"
-            href="https://github.com/Hrodgeir"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="flex items-center gap-1 text-xs">
             <Image
               aria-hidden
               className="dark:invert"
@@ -221,7 +216,7 @@ export default function Home() {
               height={24}
             />
             2025 Matt Hodgson
-          </a>
+          </div>
         </div>
       </footer>
     </div>
