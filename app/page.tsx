@@ -1,10 +1,13 @@
 import Image from "next/image";
-import Carousel from "./components/Carousel";
+import Carousel from "../components/Carousel";
+import ExperienceCard from "../components/ExperienceCard";
+
+import "swiper/css";
 
 export default function Home() {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center sm:items-start">
+      <main className="row-start-2 flex flex-col items-center md:items-start">
         <div className="flex flex-col items-center gap-6 rounded-2xl p-7 md:flex-row md:gap-8">
           <div>
             <Image
@@ -19,7 +22,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-8 md:items-start">
             <div>
               <div className="text-2xl font-medium">Matt Hodgson</div>
-              <div className="bg-gradient-to-r from-cyan-500 to-cyan-900 hover:from-cyan-950 hover:to-cyan-500 transition duration-1000 bg-clip-text font-bold text-transparent">
+              <div className="animate-typing border-r-1 border-r-white bg-gradient-to-r from-cyan-500 to-cyan-900 bg-clip-text pr-2 font-bold whitespace-nowrap text-transparent transition duration-1000 hover:from-cyan-950 hover:to-cyan-500">
                 Software Engineer
               </div>
             </div>
@@ -41,124 +44,75 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="flex max-w-4xl px-6 py-4">
+        <div className="flex w-80 p-8 md:w-160 lg:w-220">
           I am a graduate of a Bachelor of Software Engineering degree from the
           University of Victoria. I specialize in creating intuitive, responsive
           web applications and thrive on delivering impactful user experiences.
         </div>
-        <section className="py-4">
-          <div className="mx-auto max-w-4xl px-6">
-            <div className="space-y-8">
-              <Carousel>
-                <>
-                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-1000 md:flex-row">
-                    <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
-                      <Image
-                        className="brightness-0 invert filter"
-                        src="evbg.svg"
-                        alt="Company Logo"
-                        width={200}
-                        height={200}
-                      />
-                    </div>
-                    <div className="flex flex-col gap-4 md:w-3/4 md:pl-6">
-                      <div>
-                        <h3 className="text-xl font-semibold">
-                          Sr. Software Engineer I
-                        </h3>
-                        <p className="text-lg">xMatters</p>
-                        <p className="mt-2 text-sm">April 2022 - Present</p>
-                        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
-                          <li>
-                            Handled frontend library upgrades and refactored
-                            large scale, shared React components.
-                          </li>
-                          <li>
-                            Created flowcharts for the team to manage owned
-                            services such as delivery pipelines.
-                          </li>
-                          <li>
-                            Performed code reviews for peers, assisting with
-                            development questions and feedback.
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold">
-                          Software Engineer II
-                        </h3>
-                        <p className="text-lg">xMatters</p>
-                        <p className="mt-2 text-sm">March 2021 - April 2022</p>
-                        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
-                          <li>
-                            Developed various features for the xMatters web
-                            application that allows customers to perform digital
-                            operations centered around alert notifications and
-                            incident management.
-                          </li>
-                          <li>
-                            Fostered expertise with React, JavaScript, and SCSS
-                            to create modern UI features.
-                          </li>
-                          <li>
-                            Presented new features to stakeholders on a weekly
-                            basis.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col rounded-lg bg-gradient-to-b from-cyan-500 to-cyan-950 hover:from-cyan-950 hover:to-cyan-500 p-6 text-white transition duration-1000 md:flex-row">
-                    <div className="mb-4 flex items-center md:mb-0 md:w-1/4">
-                      <Image
-                        className="brightness-0 invert filter"
-                        src="vertigis.svg"
-                        alt="Company Logo"
-                        width={200}
-                        height={200}
-                      />
-                    </div>
-                    <div className="md:w-3/4 md:pl-6">
-                      <h3 className="text-xl font-semibold">
-                        Software Developer
-                      </h3>
-                      <p className="text-lg">Professional Services</p>
-                      <p className="mt-2 text-sm">April 2018 to March 2021</p>
-                      <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
-                        <li>
-                          Developed more than 20 custom web mapping applications
-                          using both the ArcGIS JavaScript API, and ArcGIS .NET
-                          Runtime for clients that involved requirements
-                          analysis, design, iterative development, product
-                          demonstrations, documentation, and software delivery.
-                        </li>
-                        <li>
-                          Developed custom UI components using TypeScript and
-                          React, and integrated complex geometry editing into
-                          the Geocortex Mobile product.
-                        </li>
-                        <li>
-                          Lead 4 projects as the technical lead to ensure
-                          successful, in-budget deliveries.
-                        </li>
-                        <li>
-                          Delivered 4 client-specific cross-platform mobile
-                          mapping applications for Windows, Android, and iOS
-                          using the Xamarin framework and ArcGIS .NET Runtime.
-                        </li>
-                        <li>
-                          Created more than 50 detailed quotes for clients based
-                          on technical knowledge and experience, each having an
-                          average of 95% success rate for staying within budget.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </>
-              </Carousel>
-            </div>
-          </div>
-        </section>
+        <Carousel
+          spaceBetween={30}
+          slidesPerView={1}
+          className="flex w-80 p-8 md:w-160 lg:w-220"
+        >
+          <ExperienceCard
+            companyLogo={"evbg.svg"}
+            jobTitle={"Sr. Software Engineer I"}
+            jobDescription={"xMatters"}
+            timeframe={"Apr 2022 - Present"}
+            bulletList={[
+              "Handled frontend library upgrades and refactored large scale, shared React components.",
+              "Created flowcharts for the team to manage owned services such as delivery pipelines.",
+              "Performed code reviews for peers, assisting with development questions and feedback.",
+            ]}
+          />
+          <ExperienceCard
+            companyLogo={"evbg.svg"}
+            jobTitle={"Software Engineer II"}
+            jobDescription={"xMatters"}
+            timeframe={"Mar 2021 - Apr 2022"}
+            bulletList={[
+              "Developed various features for the xMatters web application that allows customers to perform digital operations centered around alert notifications and incident management.",
+              "Fostered expertise with React, JavaScript, and SCSS to create modern UI features.",
+              "Presented new features to stakeholders on a weekly basis.",
+            ]}
+          />
+          <ExperienceCard
+            companyLogo={"vertigis.svg"}
+            jobTitle={"Software Developer"}
+            jobDescription={"Professional Services"}
+            timeframe={"Apr 2018 - Mar 2021"}
+            bulletList={[
+              "Developed more than 20 custom web mapping applications using both the ArcGIS JavaScript API, and ArcGIS .NET Runtime for clients that involved requirements analysis, design, iterative development, product demonstrations, documentation, and software delivery.",
+              "Developed custom UI components using TypeScript and React, and integrated complex geometry editing into the Geocortex Mobile product.",
+              "Lead 4 projects as the technical lead to ensure successful, in-budget deliveries.",
+              "Delivered 4 client-specific cross-platform mobile mapping applications for Windows, Android, and iOS using the Xamarin framework and ArcGIS .NET Runtime.",
+              "Created more than 50 detailed quotes for clients based on technical knowledge and experience, each having an average of 95% success rate for staying within budget.",
+            ]}
+          />
+          <ExperienceCard
+            companyLogo={"ism.svg"}
+            jobTitle={"Software Developer Co-op"}
+            jobDescription={"ISM Canada"}
+            timeframe={"May 2016 - Dec 2016"}
+            bulletList={[
+              "Developed Windows Presentation Foundation applications for ISM Canada's IT Support staff that involved XAML, VB.NET, SQL, and C# in an AGILE development environment.",
+              "Overhauled an existing application to have an intuitive user interface, more functionality, and an enhanced code structure improving work efficiency of users by 150%.",
+              "Developed applications involving software automation and testing frameworks and created various test plans and user guides for multiple applications.",
+              "Provided insight on design patterns and implementation of features and gathered complex requirements from users and converted such requirements into individual tasks.",
+            ]}
+          />
+          <ExperienceCard
+            companyLogo={"uvic.svg"}
+            jobTitle={"Software Developer Co-op"}
+            jobDescription={"UVIC Continuing Studies"}
+            timeframe={"Jan 2015 - Aug 2015"}
+            bulletList={[
+              "Developed ASP.NET web applications for UVIC's Division of Continuing Studies student registration system that involved HTML, CSS, Angular, Razor MVC, and C# in an AGILE development environment.",
+              "Developed a strong understanding of how a realistic software lifecycle works and how to communicate effectively with team members on a large variety of programming tasks.",
+              "Provided input and ideas to help towards the development of the web applications.",
+            ]}
+          />
+        </Carousel>
       </main>
       <footer className="row-start-3 flex flex-col flex-wrap items-center justify-center gap-[48px]">
         <div className="flex flex-row gap-[24px]">
