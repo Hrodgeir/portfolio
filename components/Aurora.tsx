@@ -23,12 +23,28 @@ const auroraColors = [
 const MAX_TRAILS = 100;
 const TRAIL_DURATION = 2.4 * 1000;
 
+function isDarkMode() {
+  if (typeof window === "undefined") return false;
+  return document.documentElement.classList.contains("dark");
+}
+
 export default function Aurora() {
   const [trails, setTrails] = useState<Trail[]>([]);
+  const [dark, setDark] = useState(isDarkMode());
   const trailId = useRef(0);
   const prevPos = useRef<{ x: number; y: number } | null>(null);
 
+  // Listen for theme changes
   useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setDark(isDarkMode());
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!dark) return;
     const handleMouseMove = (e: MouseEvent) => {
       if (prevPos.current) {
         const dx = e.clientX - prevPos.current.x;
@@ -51,17 +67,19 @@ export default function Aurora() {
       setTrails((prev) => [...prev, newTrail]);
       setTimeout(() => {
         setTrails((prev) => prev.filter((t) => t.id !== newTrail.id));
-      }, TRAIL_DURATION);
+      }, 2400);
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [dark]);
 
   useEffect(() => {
-    if (trails.length > MAX_TRAILS) {
-      setTrails((prev) => prev.slice(prev.length - MAX_TRAILS));
+    if (trails.length > 100) {
+      setTrails((prev) => prev.slice(prev.length - 100));
     }
   }, [trails]);
+
+  if (!dark) return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-20">

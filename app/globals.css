@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #171717;
-  --color-foreground: #ffffff;
+:root {
   --font: var(--font-inter);
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  font-family: var(--font);
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Wave animation */
 @keyframes wave {
@@ -39,11 +38,11 @@ body {
 /* Snowflake animation */
 @keyframes snow {
   0% {
-    transform: translateY(-10vh) scale(1);
+    transform: translateY(-10vh) scale(1) rotate(0deg);
     opacity: 0.5;
   }
   100% {
-    transform: translateY(110vh) scale(1.2);
+    transform: translateY(110vh) scale(1.2) rotate(360deg);
     opacity: 0;
   }
 }
@@ -57,6 +56,26 @@ body {
   animation: snow linear infinite;
 }
 
+@keyframes leaf-fall-diagonal {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100vw, 110vh) scale(1.2) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+.leaf {
+  top: -100px;
+  margin-left: -50%;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  animation: leaf-fall-diagonal linear infinite;
+}
+
 @keyframes aurora-trail {
   0% {
     opacity: 0.55;
@@ -68,7 +87,24 @@ body {
   }
 }
 
-.frosty {
+.bold {
+  background: linear-gradient(
+    to bottom,
+    #5c7a3a 60%,
+    #4e6a2c 80%,
+    #35522c 90%,
+    #23401d 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  text-shadow:
+    0 1px 2px #35522c88,
+    0 2px 4px #23401d44;
+}
+
+.dark .bold {
   background: linear-gradient(
     to bottom,
     #e0f7fa 60%,

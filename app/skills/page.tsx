@@ -39,7 +39,7 @@ const skillIcons: Record<string, ReactNode> = {
   Webpack: <SiWebpack className="text-blue-300" />,
   ESLint: <SiEslint className="text-indigo-400" />,
   "VS Code": <VscVscode className="text-blue-400" />,
-  "C#": <SiDotnet className="text-purple-300" />, // Or SiCsharp if available
+  "C#": <SiDotnet className="text-purple-300" />,
 };
 
 export default function Skills() {
@@ -69,22 +69,24 @@ export default function Skills() {
   ];
 
   return (
-    <div className="text-slate-500">
-      <h2 className="mb-6 text-4xl font-bold text-slate-300">Skills</h2>
+    <div className="text-[#23401d] dark:text-slate-400">
+      <h2 className="mb-6 text-4xl font-bold text-[#3d5a2a] dark:text-slate-200">
+        <span className="bold">Skills</span>
+      </h2>
       <div className="grid gap-8 md:grid-cols-2">
         {skills.map(({ category, items }) => (
           <div key={category}>
-            <h3 className="mb-3 text-lg font-semibold tracking-wide text-slate-200">
-              {category}
+            <h3 className="mb-3 text-lg font-semibold tracking-wide text-[#5c7a3a] dark:text-slate-100">
+              <span className="bold">{category}</span>
             </h3>
             <ul className="flex flex-wrap gap-2">
               {items.map((skill) => (
                 <li
                   key={skill}
-                  className="flex items-center gap-2 rounded bg-slate-800 px-3 py-1 text-sm font-medium text-slate-100 shadow transition-colors hover:bg-slate-700"
+                  className="flex items-center gap-2 rounded border border-[#b7c68b] bg-[#35522c] px-3 py-1 text-sm font-medium text-white shadow transition-colors hover:bg-[#4e6a2c] dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
                 >
                   {skillIcons[skill] || (
-                    <FaRegCheckCircle className="text-slate-400" />
+                    <FaRegCheckCircle className="text-[#b7c68b] dark:text-slate-400" />
                   )}
                   <span>{skill}</span>
                 </li>

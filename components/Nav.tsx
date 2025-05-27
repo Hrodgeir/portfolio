@@ -25,15 +25,15 @@ export default function Nav() {
             <span
               className={`block h-px transition-all duration-200 ${
                 isActive
-                  ? "w-14 bg-slate-100"
-                  : "w-10 bg-slate-600 group-hover:w-16 group-hover:bg-slate-100"
-              } `}
+                  ? "w-14 bg-[#35522c] dark:bg-slate-100"
+                  : "w-10 bg-[#23401d] group-hover:w-16 group-hover:bg-[#35522c] dark:bg-slate-700 dark:group-hover:bg-slate-100"
+              }`}
             />
             <span
               className={`text-xs font-bold tracking-wide uppercase transition-colors duration-200 ${
                 isActive
-                  ? "text-slate-100"
-                  : "text-slate-400 group-hover:text-slate-100"
+                  ? "text-[#35522c] dark:text-slate-100"
+                  : "text-[#35522c99] group-hover:text-[#35522c] dark:text-slate-400 dark:group-hover:text-slate-100"
               }`}
             >
               {label}

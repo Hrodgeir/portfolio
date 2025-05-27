@@ -56,27 +56,29 @@ export default function Experience() {
   ];
 
   return (
-    <div className="text-slate-400">
-      <h2 className="mb-8 text-4xl font-bold text-slate-200">Experience</h2>
+    <div className="text-[#23401d] dark:text-slate-400">
+      <h2 className="mb-8 text-4xl font-bold text-[#5c7a3a] dark:text-slate-200">
+        <span className="bold">Experience</span>
+      </h2>
       <div className="flex flex-col gap-8">
         {experiences.map((exp, idx) => {
           const isActive = hovered === idx;
           return (
             <div
               key={exp.company + exp.role + exp.period}
-              className={`rounded-xl border border-slate-800 bg-gradient-to-br ${
+              className={`cursor-pointer rounded-xl border p-6 transition-all duration-300 ${
                 isActive
-                  ? "from-slate-800/80 to-slate-900/60 shadow-lg shadow-slate-900/40"
-                  : "from-transparent to-transparent"
-              } cursor-pointer p-6 transition-all duration-300`}
+                  ? "border-[#b7c68b] bg-[#5c7a3a]/90 shadow-lg shadow-[#35522c44] dark:border-slate-100 dark:bg-slate-800/90"
+                  : "border-[#35522c] bg-[#35522c]/80 dark:border-slate-800 dark:bg-slate-900/60"
+              } `}
               onMouseEnter={() => setHovered(idx)}
               onMouseLeave={() => setHovered(null)}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <span className="text-xs font-semibold tracking-widest text-slate-500 uppercase">
+                <span className="text-xs font-semibold tracking-widest text-[#b7c68b] uppercase dark:text-slate-500">
                   {exp.period}
                 </span>
-                <span className="mt-1 text-xs text-slate-500 sm:mt-0 sm:text-right">
+                <span className="mt-1 text-xs text-[#b7c68b] sm:mt-0 sm:text-right dark:text-slate-500">
                   {exp.location}
                 </span>
               </div>
@@ -84,11 +86,13 @@ export default function Experience() {
                 <div>
                   <h3
                     className={`text-lg font-bold ${
-                      isActive ? "text-slate-100" : "text-slate-300"
+                      isActive
+                        ? "text-white dark:text-slate-100"
+                        : "text-[#eafbe7] dark:text-slate-300"
                     }`}
                   >
                     {exp.role}
-                    <span className="font-normal text-slate-400">
+                    <span className="font-normal text-[#b7c68b] dark:text-slate-400">
                       {" "}
                       · {exp.company}
                     </span>
@@ -99,7 +103,11 @@ export default function Experience() {
                 {exp.description.map((item, i) => (
                   <li
                     key={i}
-                    className={isActive ? "text-slate-200" : "text-slate-400"}
+                    className={
+                      isActive
+                        ? "text-white dark:text-slate-200"
+                        : "text-[#eafbe7] dark:text-slate-400"
+                    }
                   >
                     {item}
                   </li>
@@ -112,8 +120,8 @@ export default function Experience() {
                       key={skill}
                       className={`rounded-full px-3 py-1 text-xs font-semibold ${
                         isActive
-                          ? "bg-slate-700 text-slate-100"
-                          : "bg-slate-800 text-slate-400"
+                          ? "bg-[#b7c68b] text-[#23401d] dark:bg-slate-700 dark:text-slate-100"
+                          : "bg-[#eafbe7] text-[#35522c] dark:bg-slate-800 dark:text-slate-400"
                       }`}
                     >
                       {skill}
