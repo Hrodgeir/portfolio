@@ -37,7 +37,7 @@ export default function Particles() {
       setParticles(
         Array.from({ length: 160 }).map(() => ({
           left: `${Math.random() * 100}vw`,
-          fontSize: `${Math.random() * 1.5 + 0.4}rem`,
+          fontSize: `${Math.random() * 0.8 + 0.4}rem`,
           animationDuration: `${Math.random() * 8 + 12}s`,
           animationDelay: `${Math.random() * 16}s`,
           rotate: `rotate(${Math.random() * 360}deg)`,
