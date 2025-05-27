@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react";
+import Snow from "@/components/Snow";
 import Aurora from "@/components/Aurora";
 import Nav from "@/components/Nav";
 
@@ -146,22 +147,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        <div className="pointer-events-none fixed inset-0 -z-50 h-screen w-screen overflow-hidden">
-          {[...Array(80)].map((_, i) => (
-            <span
-              key={i}
-              className="snowflake pointer-events-none absolute select-none"
-              style={{
-                left: `${Math.random() * 100}vw`,
-                fontSize: `${Math.random() * 1.5 + 0.4}rem`,
-                animationDuration: `${Math.random() * 8 + 12}s`,
-                animationDelay: `${Math.random() * 16}s`,
-              }}
-            >
-              *
-            </span>
-          ))}
-        </div>
+        <Snow />
       </body>
     </html>
   );
