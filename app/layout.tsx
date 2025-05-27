@@ -28,7 +28,7 @@ export default function RootLayout({
       <Analytics />
       <body className={`${inter.variable} antialiased`}>
         <Aurora />
-        <div className="relative inset-0 z-30 transition duration-300 lg:absolute">
+        <div className="relative inset-0 z-50 transition duration-300 lg:absolute">
           <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-16 lg:py-0">
             <div className="min-h-screen lg:flex lg:justify-between lg:gap-4">
               <header className="flex flex-1 flex-col lg:sticky lg:top-0 lg:max-h-screen lg:w-[48%] lg:py-24">
@@ -146,7 +146,7 @@ export default function RootLayout({
             </div>
           </div>
         </div>
-        <div className="pointer-events-none fixed inset-0 -z-10 h-screen w-screen overflow-hidden">
+        <div className="pointer-events-none fixed inset-0 -z-50 h-screen w-screen overflow-hidden">
           {[...Array(80)].map((_, i) => (
             <span
               key={i}
@@ -154,8 +154,8 @@ export default function RootLayout({
               style={{
                 left: `${Math.random() * 100}vw`,
                 fontSize: `${Math.random() * 1.5 + 0.4}rem`,
-                animationDuration: `${Math.random() * 6 + 8}s`,
-                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${Math.random() * 8 + 12}s`,
+                animationDelay: `${Math.random() * 16}s`,
               }}
             >
               *

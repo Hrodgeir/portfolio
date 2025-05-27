@@ -29,8 +29,8 @@ export default function Home() {
 
       <p className="mb-8 text-lg">
         Before that, I developed over 20 custom web mapping applications at{" "}
-        <span className="font-medium text-slate-300">VertiGIS</span>, focusing on
-        requirements analysis, design, and iterative development. I've also
+        <span className="font-medium text-slate-300">VertiGIS</span>, focusing
+        on requirements analysis, design, and iterative development. I've also
         built cross-platform mobile apps using Xamarin and ArcGIS .NET Runtime,
         leading several projects to successful, on-budget completion.
       </p>
@@ -46,8 +46,10 @@ export default function Home() {
       </p>
 
       <p className="text-lg">
-        When I'm not coding, you can find me enjoying podcasts, experimenting
-        with new recipes, or indulging in my newfound love for the Food Network.
+        When I'm not coding, you can find me spending time with my family,
+        playing videos games, watching movies, or camping in the beautiful
+        outdoors of northern British Columbia. I believe in balancing work and
+        life, and I strive to bring that same balance to the projects I work on.
       </p>
     </div>
   );
