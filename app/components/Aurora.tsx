@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 
 type Trail = {
   id: number;
@@ -20,31 +21,15 @@ const auroraColors = [
   "rgba(255,255,200,0.10)",
 ];
 
-const MAX_TRAILS = 100;
-const TRAIL_DURATION = 2.4 * 1000;
-
-function isDarkMode() {
-  if (typeof window === "undefined") return false;
-  return document.documentElement.classList.contains("dark");
-}
-
 export default function Aurora() {
+  const { resolvedTheme } = useTheme();
   const [trails, setTrails] = useState<Trail[]>([]);
-  const [dark, setDark] = useState(isDarkMode());
+
   const trailId = useRef(0);
   const prevPos = useRef<{ x: number; y: number } | null>(null);
 
-  // Listen for theme changes
   useEffect(() => {
-    const observer = new MutationObserver(() => {
-      setDark(isDarkMode());
-    });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!dark) return;
+    if (resolvedTheme === "light") return;
     const handleMouseMove = (e: MouseEvent) => {
       if (prevPos.current) {
         const dx = e.clientX - prevPos.current.x;
@@ -71,7 +56,7 @@ export default function Aurora() {
     };
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [dark]);
+  }, []);
 
   useEffect(() => {
     if (trails.length > 100) {
@@ -79,7 +64,7 @@ export default function Aurora() {
     }
   }, [trails]);
 
-  if (!dark) return null;
+  if (resolvedTheme === "light") return null;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-20">

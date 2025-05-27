@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Experience() {
+  const { resolvedTheme } = useTheme();
   const [hovered, setHovered] = useState<number | null>(null);
 
   const experiences = [
@@ -56,7 +58,7 @@ export default function Experience() {
   ];
 
   return (
-    <div className="text-[#23401d] dark:text-slate-400">
+    <div key={resolvedTheme} className="text-[#23401d] dark:text-slate-400">
       <h2 className="mb-8 text-4xl font-bold text-[#5c7a3a] dark:text-slate-200">
         <span className="bold">Experience</span>
       </h2>

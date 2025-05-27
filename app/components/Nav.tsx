@@ -1,9 +1,11 @@
 "use client";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const pathname = usePathname();
+  const { resolvedTheme } = useTheme();
 
   const links = [
     { href: "/", label: "About" },
@@ -13,7 +15,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="flex flex-col gap-4">
+    <nav key={resolvedTheme} className="flex flex-col gap-4">
       {links.map(({ href, label }) => {
         const isActive = pathname === href;
         return (

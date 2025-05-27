@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 type Repo = {
   id: number;
@@ -13,6 +14,7 @@ type Repo = {
 };
 
 export default function Projects() {
+  const { resolvedTheme } = useTheme();
   const [repos, setRepos] = useState<Repo[]>([]);
   const [hovered, setHovered] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
@@ -29,7 +31,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="text-[#23401d] dark:text-slate-400">
+    <div key={resolvedTheme} className="text-[#23401d] dark:text-slate-400">
       <h2 className="mb-8 text-left text-4xl font-bold text-[#5c7a3a] dark:text-slate-200">
         <span className="bold">Projects</span>
       </h2>

@@ -1,4 +1,6 @@
+"use client";
 import { ReactNode } from "react";
+import { useTheme } from "next-themes";
 import {
   SiTypescript,
   SiJavascript,
@@ -43,6 +45,7 @@ const skillIcons: Record<string, ReactNode> = {
 };
 
 export default function Skills() {
+  const { resolvedTheme } = useTheme();
   const skills = [
     {
       category: "Languages",
@@ -69,7 +72,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className="text-[#23401d] dark:text-slate-400">
+    <div key={resolvedTheme} className="text-[#23401d] dark:text-slate-400">
       <h2 className="mb-6 text-4xl font-bold text-[#3d5a2a] dark:text-slate-200">
         <span className="bold">Skills</span>
       </h2>
