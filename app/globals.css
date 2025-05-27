@@ -1,50 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --swiper-pagination-color: #ffffff;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a1a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-background: #171717;
+  --color-foreground: #ffffff;
+  --font: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
-@keyframes typing {
+/* Wave animation */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(4px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+.wave {
+  animation: wave 2s infinite;
+  display: inline-block;
+}
+
+/* Snowflake animation */
+@keyframes snow {
   0% {
-    width: 0%;
-    visibility: hidden;
+    transform: translateY(-10vh) scale(1);
+    opacity: 1;
   }
   100% {
-    width: 100%;
+    transform: translateY(110vh) scale(1.2);
+    opacity: 0.7;
   }
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
+.snowflake {
+  top: -100px;
+  position: absolute;
+  color: #fff;
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+  animation: snow linear infinite;
+}
+
+@keyframes aurora-trail {
+  0% {
+    opacity: 0.55;
+    transform: scaleY(1) translateX(0);
   }
   100% {
-    border-color: white;
+    opacity: 0;
+    transform: scaleY(3) translateX(30px);
   }
 }
 
-.animate-typing {
-  animation: typing 4s steps(20) infinite alternate, blink 2.4s infinite;
+.frosty {
+  background: linear-gradient(
+    to bottom,
+    #e0f7fa 60%,
+    #b4dcff 80%,
+    #b4dcff 90%,
+    #b4dcff 95%,
+    #b4dcff 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  text-shadow:
+    0 1px 2px #b4dcff88,
+    0 2px 4px #b4dcff44;
 }
