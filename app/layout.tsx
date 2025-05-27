@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Analytics } from "@vercel/analytics/react";
-import Nav from "@/components/Nav";
-import Particles from "@/components/Particles";
-import Aurora from "@/components/Aurora";
+import Nav from "@/app/components/Nav";
+import ThemeToggle from "@/app/components/ThemeToggle";
+import Particles from "@/app/components/Particles";
+import Aurora from "@/app/components/Aurora";
 
 import "./globals.css";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const inter = Inter({
   variable: "--font-inter",
