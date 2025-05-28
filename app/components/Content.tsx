@@ -97,7 +97,7 @@ export default function Content({ children }: { children: ReactNode }) {
                       <span className="bold">n</span>
                     </span>
                   </span>{" "}
-                  British Columbia, Canada
+                  British Columbia, Canada.
                 </p>
                 <div className="mt-12">
                   <Nav />

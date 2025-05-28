@@ -68,7 +68,7 @@ export default function Experience() {
           return (
             <div
               key={exp.company + exp.role + exp.period}
-              className={`cursor-pointer rounded-xl border p-6 transition-all duration-300 ${
+              className={`rounded-xl border p-6 transition-all duration-300 ${
                 isActive
                   ? "border-[#b7c68b] bg-[#5c7a3a]/90 shadow-lg shadow-[#35522c44] dark:border-slate-100 dark:bg-slate-800/90"
                   : "border-[#35522c] bg-[#35522c]/80 dark:border-slate-800 dark:bg-slate-900/60"

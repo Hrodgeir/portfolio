@@ -36,7 +36,7 @@ export default function Nav() {
                 isActive
                   ? "text-[#35522c] dark:text-slate-100"
                   : "text-[#35522c99] group-hover:text-[#35522c] dark:text-slate-400 dark:group-hover:text-slate-100"
-              }`}
+              } bold`}
             >
               {label}
             </span>
