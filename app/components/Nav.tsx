@@ -32,7 +32,7 @@ export default function Nav() {
               }`}
             />
             <span
-              className={`text-xs font-bold tracking-wide uppercase transition-colors duration-200 ${
+              className={`text-sm font-bold tracking-wide uppercase transition-colors duration-200 ${
                 isActive
                   ? "text-[#35522c] dark:text-slate-100"
                   : "text-[#35522c99] group-hover:text-[#35522c] dark:text-slate-400 dark:group-hover:text-slate-100"
