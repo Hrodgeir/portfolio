@@ -39,18 +39,17 @@ export default function Home() {
         <span className="bold">What Drives Me</span>
       </h3>
       <p className="mb-8 text-lg">
-        I'm passionate about continuous learning and innovation in software
-        development. Whether it's exploring new technologies, optimizing user
-        interfaces, or mentoring peers, I thrive on challenges that push the
-        boundaries of what's possible in tech.
+        Whether it's exploring new technologies, optimizing user interfaces, or
+        mentoring peers, I thrive on challenges that push the boundaries of
+        what's possible in tech.
       </p>
 
       <p className="text-lg">
         When I'm not coding, you can find me spending time with my family,
-        playing videos games, watching movies, watching the Canucks throw, or
-        camping in the beautiful outdoors of northern British Columbia. I
-        believe in balancing work and life, and I strive to bring that same
-        balance to the projects I work on.
+        playing videos games, watching movies, watching hockey, or camping in
+        the beautiful outdoors of northern British Columbia. I believe in
+        balancing work and life, and I strive to bring that same balance to the
+        projects I work on.
       </p>
     </div>
   );

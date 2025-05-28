@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
   const { resolvedTheme } = useTheme();
@@ -27,6 +28,13 @@ export default function Footer() {
         aria-label="LinkedIn"
       >
         <FaLinkedin size={36} />
+      </a>
+      <a
+        href="mailto:matt.james.hodgson@gmail.com"
+        className="transition-colors hover:text-[#23401d] dark:hover:text-slate-200"
+        aria-label="Email"
+      >
+        <MdEmail size={36} />
       </a>
     </div>
   );

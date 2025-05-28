@@ -18,7 +18,7 @@ export default function Content({ children }: { children: ReactNode }) {
                   <span className="bold">Matt Hodgson</span>
                 </h1>
                 <h2 className="mt-3 flex items-center gap-2 text-lg font-medium tracking-tight sm:text-xl">
-                  <span className="bold">Frontend Developer</span>
+                  <span className="bold">Software Developer</span>
                   <ThemeToggle />
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal text-[#3d5a2a] dark:text-slate-400">
