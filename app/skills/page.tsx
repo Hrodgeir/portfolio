@@ -4,74 +4,62 @@ import { useTheme } from "next-themes";
 import {
   SiTypescript,
   SiJavascript,
-  SiHtml5,
-  SiCss3,
   SiPython,
   SiReact,
-  SiNextdotjs,
-  SiRedux,
-  SiTailwindcss,
   SiNodedotjs,
-  SiJest,
+  SiTailwindcss,
+  SiJenkins,
+  SiGooglecloud,
+  SiDocker,
   SiGit,
-  SiFigma,
-  SiVercel,
-  SiWebpack,
-  SiEslint,
   SiDotnet,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { FaJava, FaRegCheckCircle } from "react-icons/fa";
 
 const skillIcons: Record<string, ReactNode> = {
   TypeScript: <SiTypescript className="text-sky-400" />,
   JavaScript: <SiJavascript className="text-yellow-300" />,
-  HTML: <SiHtml5 className="text-orange-500" />,
-  CSS: <SiCss3 className="text-blue-400" />,
+  Java: <FaJava className="text-orange-400" />,
+  "C#": <SiDotnet className="text-purple-300" />,
   Python: <SiPython className="text-yellow-400" />,
   React: <SiReact className="text-cyan-400" />,
-  "Next.js": <SiNextdotjs className="text-white" />,
-  Redux: <SiRedux className="text-purple-400" />,
-  "Tailwind CSS": <SiTailwindcss className="text-cyan-300" />,
   "Node.js": <SiNodedotjs className="text-green-400" />,
-  Jest: <SiJest className="text-rose-400" />,
+  "Tailwind CSS": <SiTailwindcss className="text-cyan-300" />,
   Git: <SiGit className="text-orange-400" />,
-  Figma: <SiFigma className="text-pink-400" />,
-  Vercel: <SiVercel className="text-white" />,
-  Webpack: <SiWebpack className="text-blue-300" />,
-  ESLint: <SiEslint className="text-indigo-400" />,
-  "VS Code": <VscVscode className="text-blue-400" />,
-  "C#": <SiDotnet className="text-purple-300" />,
+  Jenkins: <SiJenkins className="text-amber-500" />,
+  GCP: <SiGooglecloud className="text-blue-400" />,
+  Docker: <SiDocker className="text-sky-500" />,
 };
 
 export default function Skills() {
   const { resolvedTheme } = useTheme();
+  
   const skills = [
     {
       category: "Languages",
-      items: ["TypeScript", "JavaScript", "HTML", "CSS", "C#", "Python"],
+      items: ["TypeScript", "JavaScript", "Java", "C#", "Python"],
     },
     {
       category: "Frameworks & Libraries",
-      items: ["React", "Next.js", "Redux", "Tailwind CSS", "Node.js", "Jest"],
+      items: ["React", "Node.js", "React Native", "AG Grid", "TanStack", "GWT", "Xamarin", "Tailwind CSS"],
     },
     {
-      category: "Tools",
-      items: ["Git", "VS Code", "Figma", "Vercel", "Webpack", "ESLint"],
+      category: "Tools & Infrastructure",
+      items: ["Git", "Jenkins", "GCP", "Docker", "Codex", "SCSS", "ArcGIS"],
     },
     {
-      category: "Other",
+      category: "Core Strengths",
       items: [
-        "REST APIs",
-        "Agile",
-        "CI/CD",
-        "Unit Testing",
-        "Responsive Design",
+        "Frontend Architecture",
+        "MVC Design Patterns",
+        "Technical Leadership",
+        "Mentorship",
+        "Agile Development",
       ],
     },
   ];
 
-  return (
+return (
     <div key={resolvedTheme} className="text-[#23401d] dark:text-slate-400">
       <h2 className="mb-6 text-4xl font-bold text-[#3d5a2a] dark:text-slate-200">
         <span className="bold">Skills</span>

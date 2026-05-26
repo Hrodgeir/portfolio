@@ -13,23 +13,24 @@ export default function Experience() {
       period: "April 2022 - Present",
       location: "Remote",
       description: [
-        "Handled frontend library upgrades and refactored large scale, shared React components.",
-        "Created flowcharts for the team to manage owned services such as delivery pipelines.",
-        "Performed code reviews for peers, assisting with development questions and feedback.",
+        "Led modernization of application authentication infrastructure to enhance product security and long-term framework maintainability.",
+        "Facilitated bi-weekly frontend engineering meetings focused on component architecture, styling standards, shared tooling, and UI consistency.",
+        "Refactored shared React component libraries and frontend infrastructure while developing Jenkins CI/CD pipelines for containerized GCP environments.",
+        "Collaborated within agile teams to integrate React front-ends with backend architectures, utilizing MVC design patterns to cleanly separate client UI layers from data models.",
       ],
-      skills: ["React", "JavaScript", "SCSS", "GCP"],
+      skills: ["React", "TypeScript", "JavaScript", "Node.js", "Jenkins", "GCP", "Docker", "MVC Architecture"],
     },
     {
       company: "Everbridge - xMatters Product Development",
       role: "Software Engineer II",
       period: "March 2021 - April 2022",
-      location: "Victoria, BC",
+      location: "Remote",
       description: [
-        "Developed various features for the xMatters web application that allows customers to perform digital operations centered around alert notifications and incident management.",
-        "Fostered expertise with React, JavaScript, and SCSS to create modern UI features.",
-        "Presented new features to stakeholders on a weekly basis.",
+        "Developed key features for the xMatters web application used for enterprise digital operations, alerting frameworks, and incident management workflows.",
+        "Built modern, highly responsive UI components using React, JavaScript, Git version control, and SCSS frameworks.",
+        "Presented weekly live feature demonstrations to cross-functional stakeholders to secure alignment and fast iteration loops.",
       ],
-      skills: ["React", "JavaScript", "SCSS"],
+      skills: ["React", "JavaScript", "Git", "SCSS"],
     },
     {
       company: "VertiGIS (Latitude Geographics) - Professional Services",
@@ -37,12 +38,12 @@ export default function Experience() {
       period: "April 2018 - March 2021",
       location: "Victoria, BC",
       description: [
-        "Developed more than 20 custom web mapping applications for clients that involved requirements analysis, design, iterative development, product demonstrations, documentation, and software delivery.",
-        "Lead 4 projects as the technical lead to ensure successful, in-budget deliveries.",
-        "Delivered 4 client-specific cross-platform mobile mapping applications for Windows, Android, and iOS using the Xamarin framework and ArcGIS .NET Runtime.",
-        "Created more than 50 detailed quotes for clients based on technical knowledge and experience, each having an average of 95% success rate for staying within budget.",
+        "Delivered 20+ custom enterprise web mapping applications using Git through full project lifecycles, spanning design, iterative development, and final software deployment.",
+        "Served as technical lead on 4 client-facing software initiatives, ensuring on-time and within-budget completions.",
+        "Built 4 cross-platform mobile mapping applications for Windows, Android, and iOS using the Xamarin framework and ArcGIS .NET Runtime.",
+        "Produced 50+ detailed technical architecture quotes for enterprise accounts to support project scope analysis and engineering estimations.",
       ],
-      skills: ["JavaScript", "C#", "React", "ArcGIS", "Xamarin"],
+      skills: ["JavaScript", "C#", "React", "Git", "ArcGIS", "Xamarin"],
     },
     {
       company: "UVIC Continuing Studies & ISM Canada",
@@ -50,8 +51,8 @@ export default function Experience() {
       period: "January 2015 - April 2018",
       location: "Victoria, BC",
       description: [
-        "Developed Windows Presentation Foundation applications for ISM Canada's IT Support staff that involved XAML, VB.NET, SQL, and C# in an AGILE development environment.",
-        "Developed ASP.NET web applications for UVIC's Division of Continuing Studies student registration system that involved HTML, CSS, Angular, Razor MVC, and C# in an AGILE development environment.",
+        "Developed desktop applications for IT support operations at ISM Canada utilizing XAML, VB.NET, SQL database services, and C# in an agile setting.",
+        "Developed web interfaces for UVic's student registration systems featuring HTML, CSS, Angular components, and C# within Razor MVC architectures.",
       ],
       skills: ["C#", "VB.NET", "SQL", "HTML", "CSS", "Angular", "Razor MVC"],
     },
@@ -101,7 +102,7 @@ export default function Experience() {
                   </h3>
                 </div>
               </div>
-              <ul className="mt-3 space-y-2 text-base">
+              <ul className="mt-3 space-y-2 text-base list-disc pl-5">
                 {exp.description.map((item, i) => (
                   <li
                     key={i}
